@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DaaS Micro-Scoring</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">DaaS MICRO-SCORING</p>
+      <h1>Mesurez la viabilité de votre boutique.</h1>
+      <p class="subtitle">Un score financier clair, calculé en temps réel à partir de vos flux.</p>
+    </section>
+    <section class="panel">
+      <div class="panel-heading">
+        <div>
+          <p class="section-label">DONNÉES FINANCIÈRES</p>
+          <h2>Vos transactions</h2>
+        </div>
+        <button id="add-transaction" class="button secondary" type="button">+ Ajouter</button>
+      </div>
+      <form id="score-form">
+        <div id="transactions"></div>
+        <button class="button primary" type="submit">Calculer le score</button>
+        <p id="error" class="error" role="alert" hidden></p>
+      </form>
+    </section>
+    <section id="result" class="panel result" hidden>
+      <div class="score-card">
+        <p class="section-label">SCORE DE VIABILITÉ</p>
+        <strong id="score">—</strong><span>/100</span>
+      </div>
+      <div class="metrics">
+        <div><span>Entrées</span><strong id="entries">—</strong></div>
+        <div><span>Sorties</span><strong id="exits">—</strong></div>
+        <div><span>Solde net</span><strong id="balance">—</strong></div>
+      </div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
